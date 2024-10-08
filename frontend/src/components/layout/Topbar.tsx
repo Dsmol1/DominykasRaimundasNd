@@ -10,6 +10,7 @@ import { UserContext } from "@/context/UserContext";
 const Topbar = () => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
+  const userName = user ? user.name : "Guest";
 
   const links = [
     {
@@ -42,7 +43,9 @@ const Topbar = () => {
       </div>
       <div className={styles.rightSide}>
         {user ? (
-          <Avatar>{user.name[0]}</Avatar>
+          <Avatar userName={userName}> {/* Pass the user's name to the Avatar */}
+            {user.name[0]}
+          </Avatar>
         ) : (
           <Button onClick={() => navigate(ROUTES.LOGIN)} large>
             Login / Sign Up
