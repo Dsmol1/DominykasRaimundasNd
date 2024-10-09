@@ -1,0 +1,4 @@
+**/.history/**
+/backend/node_modules/
+/backend/.history/
+.env

@@ -10,6 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const dotenv = require('dotenv').config({ path: "./.env" });
+
 app.use("/auth", authRoutes);
 app.use("/categories", categoryRoutes);
 app.use("/businesses", businessRoutes);
