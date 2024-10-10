@@ -12,6 +12,7 @@ import AuthLayout from "./components/layout/AuthLayout";
 import RootLayout from "./components/layout/RootLayout";
 import { UserProvider } from "./context/UserContext";
 import Services from "./pages/Services";
+import BusinessInner from "./pages/BusinessInner";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.SEARCH_CATEGORY,
         element: <SearchCategory />,
+      },
+      {
+        path: ROUTES.BUSINESS_INNER,
+        element: <BusinessInner />,
       },
     ],
   },

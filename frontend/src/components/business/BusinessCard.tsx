@@ -1,12 +1,17 @@
 import Button from "../common/Button";
 import styles from "./BusinessCard.module.scss";
 import { Business } from "./types";
+import { ROUTES } from "@/router/consts";
+import { useNavigate, generatePath } from "react-router-dom";
 
 interface BusinessCardProps {
   business: Business;
 }
 
 const BusinessCard = ({ business }: BusinessCardProps) => {
+  const navigate = useNavigate();
+  const bookNowPath = generatePath(ROUTES.BUSINESS_INNER, { id: business._id });
+
   return (
     <div className={styles.card}>
       {business.imageUrls.length && (
@@ -21,7 +26,7 @@ const BusinessCard = ({ business }: BusinessCardProps) => {
         <h3 className={styles.name}>{business.name}</h3>
         <p className={styles.contactPerson}>{business.contactPerson}</p>
         <p className={styles.address}>{business.address}</p>
-        <Button>Book now</Button>
+        <Button onClick={() => navigate(bookNowPath)}>Book now</Button>
       </div>
     </div>
   );
