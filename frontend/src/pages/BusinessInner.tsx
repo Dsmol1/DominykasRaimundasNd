@@ -18,7 +18,7 @@ const BusinessInner = () => {
     const businesses = data ?? [];
 
     const currentBusiness = businesses.filter((business) => business._id == idStr )[0];
-    const similarBusinesses = businesses.filter((business) => business.category == currentBusiness.category && business._id != id ).slice(0,2);
+    const similarBusinesses = businesses.filter((business) => business.category == currentBusiness.category && business._id != id ).slice(0,3);
 
     const business = currentBusiness ?? {
         name: '',
@@ -80,8 +80,8 @@ const BusinessInner = () => {
                     <Button><LuFileSignature />Book appointment</Button>
                     <h5>Similar businesses</h5>
                     <div className={styles.verticalBusinessList}>
-                        {similarBusinesses.map((business) => (
-                            <div className={styles.smallCard} onClick={() => navigate(`/businessess/${business._id}`)}>
+                        {similarBusinesses.map((business, index) => (
+                            <div className={styles.smallCard} onClick={() => navigate(`/businessess/${business._id}`)} key={index}>
                                 {business.imageUrls?.length > 0 ?
                                     <div className={styles.businessImage}>
                                         <img src={business.imageUrls[0]} alt="Business image" />
