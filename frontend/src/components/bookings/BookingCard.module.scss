@@ -1,0 +1,56 @@
+.bookingCard {
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1em;
+
+  .imageHolder {
+    max-width: 100px;
+    margin-right: 0.5em;
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      height: 125px;
+      object-fit: cover;
+    }
+  }
+  .info {
+    .businessName {
+      font-weight: 600;
+      color: #000;
+      margin: 0 0 0.5em 0;
+    }
+    .contactPerson {
+      color: $primary_color;
+    }
+    .address {
+      color: #676363;
+    }
+    .date {
+      color: #676363;
+    }
+    .time {
+      color: #676363;
+    }
+    .address, .time, .date, .contactPerson {
+      display: flex;
+      align-items: center;
+      margin: 0.3em 0;
+      line-height: 1.1;
+
+      svg {
+        color: $primary_color;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+        margin-right: 0.3em;
+      }
+      b {
+        color: #000;
+      }
+    }
+  }
+}

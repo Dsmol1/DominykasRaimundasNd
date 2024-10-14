@@ -41,7 +41,7 @@ const bookingSchema = new mongoose.Schema<IBooking>({
     type: String,
     required: [true, "Booking status is required."], // Status must be provided
     enum: {
-      values: ["confirmed", "pending", "cancelled"],
+      values: ["confirmed", "pending", "cancelled", "completed"],
       message: "{VALUE} is not supported", // Custom message if an unsupported value is provided
     },
   },

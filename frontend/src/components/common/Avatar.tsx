@@ -49,7 +49,7 @@ const Avatar: React.FC<AvatarProps> = ({ children, userName }) => {
         <div className={styles.dropdownMenu}>
           <p>{userName}</p>
           <a href="#profile" onClick={handleLinkClick}><strong>Profilis?</strong></a>
-          <a href="#settings" onClick={handleLinkClick}>My bookings</a>
+          <a onClick={() => navigate("/mybookings")}>My bookings</a>
           <a href="#logout" onClick={handleLogout}>Logout</a>
         </div>
       )}

@@ -13,6 +13,7 @@ import RootLayout from "./components/layout/RootLayout";
 import { UserProvider } from "./context/UserContext";
 import Services from "./pages/Services";
 import BusinessInner from "./pages/BusinessInner";
+import Bookings from "./pages/Bookings";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.BUSINESS_INNER,
         element: <BusinessInner />,
+      },
+      {
+        path: ROUTES.MY_BOOKINGS,
+        element: <Bookings />,
       },
     ],
   },
