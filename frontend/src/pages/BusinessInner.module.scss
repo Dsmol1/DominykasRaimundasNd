@@ -1,0 +1,207 @@
+.businessInner {
+    padding: 4em;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin: 0 0 3rem 0;
+
+        .left {
+            display: flex;
+            flex-flow: row nowrap;
+
+            .businessImage {
+                margin-right: 1rem;
+                display: flex;
+                align-items: center;
+
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            .info {
+                display: flex;
+                justify-content: center;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+
+                > h2 {
+                    font-size: 2.5em;
+                    margin: 1rem 0;
+                }
+                .address, .email {
+                    margin: 0.5rem 0;
+                    font-size: 1rem;
+                    color: #898484;
+                    font-weight: 500;
+
+                    svg {
+                        vertical-align: middle;
+                        margin-right:  0.5rem;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+                *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            justify-content: center;
+            flex-flow: column nowrap;
+            align-items: flex-end;
+
+            button {
+                padding: 0.5rem 1rem;
+                margin: 0 0 1rem 0;
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            .contactPerson, .availability {
+                margin: 0.5rem 0;
+                font-size: 1rem;
+                color: #898484;
+                font-weight: 500;
+
+                svg {
+                    vertical-align: middle;
+                    margin-right:  0.5rem;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            .contactPerson {
+                color: $primary-color;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+
+            .left {
+                margin-bottom: 2rem;
+            }
+            .right {
+                align-items: flex-start;
+            }
+        }
+    }
+    .bottom {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+
+        .left {
+            > h3 {
+                font-size: 1.4rem;
+                margin: 0 0 1.2rem 0;
+            }
+            .description {
+                font-size: 1rem;
+                margin: 0 0 1.2rem 0;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 1rem;
+
+                img {
+                    max-width: 100%;
+                    border-radius: 8px;
+                }
+            }
+        }
+        .right {
+            > button {
+                width :100%;
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    vertical-align: middle;
+                    margin-right: 0.5rem;
+                }
+            }
+            > h5 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin: 1rem 0;
+            }
+            .verticalBusinessList {
+                grid-template-columns: 1fr;
+                display: grid;
+
+                .smallCard {
+                    margin: 0 0 2rem 0;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-start;
+                    border-radius: 1rem;
+                    padding: 0.2rem;
+                    cursor: pointer;
+
+                    .businessImage {
+                        margin-right: 0.5rem;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            border-radius: 1rem;
+                            object-fit: cover;
+                            width: 100px;
+                            height: 120px;
+                        }
+                    }
+                    .info {
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-flow: column nowrap;
+                        align-items: flex-start;
+                        padding: 0.5rem 0;
+        
+                        .category {
+                            font-size: 0.9rem;
+                            margin: 0 0 0.5rem 0;
+                            font-weight: 600;
+                        }
+                        .contactPerson {
+                            font-size: 0.9rem;
+                            margin: 0 0 0.2rem 0;
+                            color: $primary_color;
+                        }
+                        .address {
+                            margin: 0 0 0.2rem 0;
+                            font-size: 0.9rem;
+                            color: #898484;
+                            font-weight: 400;
+                        }
+                        *:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: rgba(86, 20, 208, 0.25) 5px 5px 15px;
+                    }
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+
+        .bottom {
+            grid-template-columns: 1fr;
+        }
+    }
+}
