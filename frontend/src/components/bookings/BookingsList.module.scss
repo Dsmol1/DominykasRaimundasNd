@@ -1,0 +1,39 @@
+.container {
+  padding: 2em 4em 4em 4em;
+
+  > h3 {
+    margin: 0 0 1em 0;
+  }
+  .bookingTabsHolder {
+    padding: 0.3em;
+    background-color: #f3f6f9;
+    border-radius: 5px;
+    display: flex;
+    gap: 0.4em;
+    margin: 0 0 0.5em 0;
+
+    > div {
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      font-weight: 500;
+      color: #a8a8a8;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #FFF;
+      color: #000;
+    }
+  }
+  .bookingsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+
+    .bookingsList {
+      grid-template-columns: 1fr;
+    }
+  }
+}
